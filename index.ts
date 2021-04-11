@@ -1,3 +1,8 @@
-const hoge = "test";
+import { parse } from "@babel/parser";
 
-console.log(hoge);
+// AST に変換
+const ast = parse(`
+const a = 1
+`);
+
+console.log(JSON.stringify(ast, null, 2));
